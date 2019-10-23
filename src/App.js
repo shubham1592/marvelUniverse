@@ -4,7 +4,8 @@ import {Card, Container, FormControl, InputGroup, Row} from 'react-bootstrap';
 import './App.css';
 import Pagination from "./components/Pagination";
 import {withCharacters} from "./context/CharacterContext";
-
+//comment here about the code written by shuybham kumar sharma
+//this work is done by neetigya the great
 const App = ({isLoading, characters, characterPages, fetchCharactersByNamePaginated, fetchCharactersPaginated}) => {
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -28,6 +29,7 @@ const App = ({isLoading, characters, characterPages, fetchCharactersByNamePagina
           fetchCharactersPaginated(1);
         }
       }
+      //target value fetchCharactersPaginated
     }, TYPING_TIMEOUT);
   };
 
