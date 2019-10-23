@@ -33,6 +33,7 @@ const App = ({isLoading, characters, characterPages, fetchCharactersByNamePagina
 
   const onPageChanged = page => {
     if (searchQuery) {
+      // search Query  
       fetchCharactersByNamePaginated(searchQuery, page);
     } else {
       fetchCharactersPaginated(page);
@@ -55,6 +56,7 @@ const App = ({isLoading, characters, characterPages, fetchCharactersByNamePagina
             </InputGroup>
           </div>
         </Row>
+    // This is used for functional designing
         <Pagination pages={characterPages} onPageChanged={onPageChanged}/>
         <Row className="Scrollable">
           {isLoading ? (
@@ -83,5 +85,5 @@ const App = ({isLoading, characters, characterPages, fetchCharactersByNamePagina
     </div>
   )
 };
-
+// exorting App
 export default withCharacters(App);
